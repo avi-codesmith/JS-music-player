@@ -51,9 +51,9 @@ nav {
   height: 40px;
 }
 
-svg {
-  height: auto;
-  width: auto;
+.small {
+  width: 26px;
+  height: 26px;
 }
 
 .img {
@@ -129,6 +129,6 @@ p {
 
 @media (max-width: 432px) {
   .music-player {
-    width: 320px;
+    width: 300px;
   }
 }

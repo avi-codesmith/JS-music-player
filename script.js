@@ -27,8 +27,23 @@ const playPause = () => {
 
 background.addEventListener("click", playPause);
 
+progress.addEventListener("change", () => {
+  song.currentTime = progress.value;
+});
+
 if (song.play()) {
   setInterval(() => {
     progress.value = song.currentTime;
   }, 500);
 }
+
+song.addEventListener("ended", () => {
+  playIcon.src = "replay.png";
+  song.pause();
+  progress.disabled = "true";
+  progress.style.cursor = "not-allowed";
+  // if (song.pause()) {
+  // playIcon.src = "play.png";
+  // song.play();
+  // }
+});
