@@ -44,16 +44,42 @@ nav {
   border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: center;
   cursor: pointer;
   box-shadow: 0 2px 12px #999;
   width: 40px;
   height: 40px;
+  position: relative;
+}
+
+.circle1 {
+  flex-direction: column;
+}
+
+.range-wrapper {
+  background-color: royalblue;
+  display: flex;
+  align-items: center;
+  padding: 12px 28px 12px 12px;
+  border-radius: 20px 0 0 20px;
+}
+
+.range-wrapper {
+  position: absolute;
+  top: 84px;
+}
+
+.sound-range {
+  accent-color: #fff;
 }
 
 .small {
   width: 26px;
   height: 26px;
+  z-index: 99999;
+}
+
+.sound-icon {
+  filter: invert(100%);
 }
 
 .img {
@@ -131,4 +157,13 @@ p {
   .music-player {
     width: 300px;
   }
+}
+
+.circle:hover .range-wrapper {
+  display: flex;
+}
+
+.range-wrapper {
+  transform: rotate(270deg);
+  display: none;
 }
