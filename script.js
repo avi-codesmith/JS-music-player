@@ -12,7 +12,7 @@ song.onloadedmetadata = () => {
   progress.value = song.currentTime;
 };
 
-document.onload = () => {
+window.onload = () => {
   song.pause();
 };
 
