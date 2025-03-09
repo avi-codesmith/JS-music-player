@@ -7,13 +7,9 @@ const background = document.querySelector(".big");
 const soundTracker = document.querySelector(".sound-range");
 const songIcon = document.querySelector(".sound-icon");
 
-song.onloadedmetadata = () => {
-  progress.max = song.duration;
-  progress.value = song.currentTime;
-  song.pause();
-};
-
 window.onload = () => {
+  progress.value = song.currentTime;
+  progress.max = song.duration;
   song.pause();
 };
 
