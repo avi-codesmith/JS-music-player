@@ -16,11 +16,19 @@ const playPause = () => {
   if (playIcon.src.includes("play.png")) {
     playIcon.src = "pause.png";
     song.play();
+    progress.disabled = false;
+    progress.style.cursor = "pointer";
   } else if (playIcon.src.includes("pause.png")) {
     playIcon.src = "play.png";
     song.pause();
   }
 };
+
+document.addEventListener("keydown", (e) => {
+  if (e.code === "Space") {
+    playPause();
+  }
+});
 
 background.addEventListener("click", playPause);
 
