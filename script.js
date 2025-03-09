@@ -10,6 +10,7 @@ const songIcon = document.querySelector(".sound-icon");
 song.onloadedmetadata = () => {
   progress.max = song.duration;
   progress.value = song.currentTime;
+  song.pause();
 };
 
 window.onload = () => {
