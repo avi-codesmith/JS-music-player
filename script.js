@@ -13,6 +13,10 @@ song.onloadedmetadata = () => {
   song.pause();
 };
 
+song.onload = () => {
+  song.pause();
+};
+
 const playPause = () => {
   if (playIcon.src.includes("play.png")) {
     playIcon.src = "pause.png";
